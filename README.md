@@ -113,18 +113,9 @@ This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Results & PretrainedParams
 
+### Log
+[config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py)
 
-A Colab tutorial is also provided. You may preview the notebook [here](demo/MMSegmentation_Tutorial.ipynb) or directly [run](https://colab.research.google.com/github/open-mmlab/mmsegmentation/blob/master/demo/MMSegmentation_Tutorial.ipynb) on Colab.
+### Test results
 
-## Citation
-
-
-## Contributing
-
-
-## Acknowledgement
-
-
-
-# DABNet
-# DABNet
+### PretrainedParams

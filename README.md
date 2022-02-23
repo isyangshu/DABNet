@@ -5,9 +5,11 @@
 ![GitHub issues](https://img.shields.io/github/issues/isyangshu/DABNet?style=flat-square)
 
 <div  align="center"> 
-<img src="resources/compari.png" width = "300" height = "200" />
+<img src="resources/compari.png" width = "600" height = "400" />
 </div>
+
 ![image](resources/result.png)
+
 ## Installation
 
 Our project is developed based on [MMsegmentation](https://github.com/open-mmlab/mmsegmentation). MMSegmentation is an open source semantic segmentation toolbox based on PyTorch. Please refer to [get_started.md](docs/get_started.md#installation) for installation and [dataset_prepare.md](docs/dataset_prepare.md#prepare-datasets) for dataset preparation.

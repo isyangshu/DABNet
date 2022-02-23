@@ -4,7 +4,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/isyangshu/DABNet?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/isyangshu/DABNet?style=flat-square)
 
-![image](resources/compari.png)
+<div  align="center"> 
+<img src="resources/compari.png" width = "300" height = "200" />
+</div>
 ![image](resources/result.png)
 ## Installation
 

@@ -136,12 +136,14 @@ nohup ./tools/dist_train.sh configs/dabnet/dabnet_r18-d32_in1k-pre_4x8_1024x1024
 > More detail, please refer to [Train Doc](https://mmsegmentation.readthedocs.io/en/latest/train.html).
 
 ### Test
-```shell
-# Test mIoU for Cityscapes
-python tools/test.py ${configs} ${checkpoints} --eval mIoU
-```
 
-* Cityscapes Test set
+* Cityscapes val set
+    ```shell
+    # Test mIoU for Cityscapes
+    python tools/test.py ${configs} ${checkpoints} --eval mIoU
+    ```
+
+* Cityscapes test set
     * Test DABNet on cityscapes test split with 4 GPUs, and generate the png files to be submit to the official evaluation server.
 
     * First, add following to config file ${configs},

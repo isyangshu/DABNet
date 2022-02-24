@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/isyangshu/DABNet?style=flat-square)
 
 <div  align="center"> 
-<img src="resources/compari.png" width = "600" height = "400" />
+<img src="resources/compari.png" width = "500" height = "350" />
 </div>
 
 ![image](resources/result.png)
@@ -19,7 +19,6 @@ Our project is developed based on [MMsegmentation](https://github.com/open-mmlab
 > English | [简体中文](README_zh-CN.md)
 
 ```text
-My work is based on MMSegmentation. 
 Due to my unfamiliarity with github, I may make mistakes (so you can use MMsegmentation and just copy my code). 
 At the same time, I usually use "BiseNetV1_res" as my network name during the experiment (because DABNet is indeed improved based on BiseNetV1).
 Although I made changes before uploading, there may still be some naming conflicts (eg BiseNetV1_Res vs DABNet, HFA vs PCE). 
@@ -151,18 +150,17 @@ This project is released under the [Apache 2.0 license](LICENSE).
 
 ### COCO-10k
 
-| Method          | Crop Size | Inference Size | Batch size | iteration | set  | mIoU  | model                                                        | config                                                       |
-| --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- |------------------------------------------------------------ | ------------------------------------------------------------ |
-| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8          | 80k       | val  | 77.37 |[google drive](https://drive.google.com/file/d/1f3b7I7IwKx-hcr16afjcxkAyXyeNQCAz/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P2      | 1024x1024   | 2048x1024  |8          | 80k       | val  | 77.90 | [google drive](https://drive.google.com/file/d/1dplB4wceJhyVRQfZR5AWODywMN90CY0h/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_E        | 1024x1024   | 2048x1024   |4          | 80k       | val  | 79.34 | [google drive](https://drive.google.com/file/d/1469aYtEAuhT39BrHn0yOv1s71unF85JE/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py) |
+| Method          | Crop Size | Inference Size | Batch size | iteration | mIoU  | pixACC | FPS  | model                                                        | config                                                       |
+| --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- | ----- |------------------------------------------------------------ | ------------------------------------------------------------ |
+| DABNet_R_P2     | 512x512  | 640x640  | 8 * 4   | 80k | 29.5 | 63.1 | 104.6 | - | [config](logs/dabnet-coco10k.log) |
+| DABNet_E        | 512x512  | 640x640  | 8 * 4   | 80k | 32.4 | 65.5 | 70.8  | - | [config](logs/dabnet-e-coco10k.log) |
+
 ### CamVid
 
-| Method          | Crop Size | Inference Size | Batch size | iteration | set  | mIoU | model                                                        | config                                                       |
+| Method          | Crop Size | Inference Size | Batch size | iteration | set  | mIoU | FPS                                                    | config                                                       |
 | --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- |------------------------------------------------------------ | ------------------------------------------------------------ |
-| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8          | 80k       | val  | 77.37 | [google drive](https://drive.google.com/file/d/1f3b7I7IwKx-hcr16afjcxkAyXyeNQCAz/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P2      | 1024x1024   | 2048x1024  |8          | 80k       | val  | 77.90 | [google drive](https://drive.google.com/file/d/1dplB4wceJhyVRQfZR5AWODywMN90CY0h/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_E        | 1024x1024   | 2048x1024   |4          | 80k       | val  | 79.34 | [google drive](https://drive.google.com/file/d/1469aYtEAuhT39BrHn0yOv1s71unF85JE/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py) |
+| DABNet_R_P2     | 960x768  | 960x768  | 2 * 4   | 10k       | train+val  | 74.3 | 92.2 | [config](logs/README.md) |
+| DABNet_E        | 960x768  | 960x768  | 2 * 4   | 10k       | train+val  | 76.5 | 56.5 | [config](logs/README.md) |
 
 ## Results & PretrainedParams
 

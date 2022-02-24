@@ -34,6 +34,6 @@ __all__ = [
     'VisionTransformer', 'SwinTransformer', 'MixVisionTransformer',
     'BiSeNetV1', 'BiSeNetV2', 'ICNet', 'TIMMBackbone', 'ERFNet',
     'DABNet', 'DABNet_Ef', 'DABNet_baseline', 'DABNet_Image',
-    'DABNet_PCE', 'DABNet_PCE0', 'DABNet_PCE01', 'BDABNet_PCE02',
+    'DABNet_PCE', 'DABNet_PCE0', 'DABNet_PCE01', 'DABNet_PCE02',
     'DABNet_FCN', 'DABNet_Spatial', 'DABNet_Channel', 'DABNet_P8'
 ]

@@ -125,7 +125,10 @@ I provide a script `/tools/convert_datasets/camvid.py/` to convert the Camvid da
 There are also tutorials for [customizing dataset](docs/tutorials/customize_datasets.md), [designing data pipeline](docs/tutorials/data_pipeline.md), [customizing modules](docs/tutorials/customize_models.md), and [customizing runtime](docs/tutorials/customize_runtime.md).
 MMSegmentation also provides many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
 ### Train
-
+```shell
+nohup ./tools/dist_train.sh ${configs} ${GPU Nums} 2>&1 &
+nohup ./tools/dist_train.sh configs/dabnet/dabnet_r18-d32_in1k-pre_4x8_1024x1024_80k_cityscapes.py 4 2>&1 &
+```
 ### Test
 
 ### Latency

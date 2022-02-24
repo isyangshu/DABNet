@@ -65,7 +65,59 @@ pip install timm # used for Efficientnet_B1
   For the specific installation method and version selection, please refer to [MMSegmentation](https://mmcv.readthedocs.io/en/latest/deployment/tensorrt_plugin.html).
   
   We simulate inference and measure inference speed (FPS) on NVIDIA GTX 1080Ti GPU with CUDA 10.2, CUDNN 8.0.4, and TensorRT 7.2.1.6. （Just need to configure according to the above method on the machine with GTX1080ti, pay attention to modify the pytorch and mmcv corresponding to the cuda version.）
-### datasets
+### Datasets
+#### Cityscapes
+
+> The data could be found [hear](https://www.cityscapes-dataset.com/downloads/) after registration.
+> 
+> You can also test Cityscapes results in the same website.
+
+By convention, '\*\*labelTrainIds.png' are used for cityscapes training. We provided a scripts based on cityscapesscripts to generate '\**labelTrainIds.png'.
+
+```shell
+# --nproc means 8 process for conversion, which could be omitted as well.
+python tools/convert_datasets/cityscapes.py data/cityscapes --nproc 8
+
+```
+#### COCO-10k
+
+```shell
+# download
+mkdir coco_stuff10k && cd coco_stuff10k
+wget http://calvin.inf.ed.ac.uk/wp-content/uploads/data/cocostuffdataset/cocostuff-10k-v1.1.zip
+
+# unzip
+unzip cocostuff-10k-v1.1.zip
+
+# --nproc means 8 process for conversion, which could be omitted as well.
+python tools/convert_datasets/coco_stuff10k.py /path/to/coco_stuff10k --nproc 8
+```
+
+#### COCO-164k
+
+```shell
+# download
+mkdir coco_stuff164k && cd coco_stuff164k
+wget http://images.cocodataset.org/zips/train2017.zip
+wget http://images.cocodataset.org/zips/val2017.zip
+wget http://calvin.inf.ed.ac.uk/wp-content/uploads/data/cocostuffdataset/stuffthingmaps_trainval2017.zip
+
+# unzip
+unzip train2017.zip -d images/
+unzip val2017.zip -d images/
+unzip stuffthingmaps_trainval2017.zip -d annotations/
+
+# --nproc means 8 process for conversion, which could be omitted as well.
+python tools/convert_datasets/coco_stuff164k.py /path/to/coco_stuff164k --nproc 8
+```
+
+#### CamVid
+
+> The images have a resolution of 960 × 720 and 32 semantic categories, in which the subset of 11 classes are used for segmentation experiments. The data could be found [hear](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/). 
+> 
+> You can also get data [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw).
+> 
+> `tools/convert_datasets/backbone`
 
 ## Training and Testing
  Please see [train.md](docs/train.md) and [inference.md](docs/inference.md) for the basic usage of MMSegmentation.
@@ -73,6 +125,7 @@ There are also tutorials for [customizing dataset](docs/tutorials/customize_data
 We also provide many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
 
 ## Speed
+Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.
 
 ## License
 

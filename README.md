@@ -143,11 +143,14 @@ python tools/test.py ${configs} ${checkpoints} --eval mIoU
 ```
 
 Test DABNet on cityscapes test split with 4 GPUs, and generate the png files to be submit to the official evaluation server.
-First, add following to config file configs/pspnet/pspnet_r50-d8_512x1024_40k_cityscapes.py,
+
+First, add following to config file ${configs},
+
 >data = dict(
     test=dict(
         img_dir='leftImg8bit/test',
         ann_dir='gtFine/test'))
+        
 Then run test.
 ```shell
 ./tools/dist_test.sh ${configs} ${checkpoints} 4 --format-only --eval-options "imgfile_prefix=./test_results"

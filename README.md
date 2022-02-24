@@ -39,7 +39,7 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6
 git clone https://github.com/isyangshu/DABNet.git
 cd DABNet
 pip install -e .  # or "python setup.py develop"
-pip install -e. [all]
+pip install -e .[all]
 
 mkdir data
 ```
@@ -72,7 +72,7 @@ pip install timm # used for Efficientnet_B1
 > 
 > You can also test Cityscapes results in the same website.
 
-By convention, '\*\*labelTrainIds.png' are used for cityscapes training. We provided a scripts based on cityscapesscripts to generate '\**labelTrainIds.png'.
+By convention, `\*\*labelTrainIds.png` are used for cityscapes training. We provided a scripts based on cityscapesscripts to generate `\**labelTrainIds.png`.
 
 ```shell
 # --nproc means 8 process for conversion, which could be omitted as well.

@@ -112,16 +112,21 @@ python tools/convert_datasets/coco_stuff164k.py /path/to/coco_stuff164k --nproc 
 
 #### CamVid
 
-> The images have a resolution of 960 × 720 and 32 semantic categories, in which the subset of 11 classes are used for segmentation experiments. The data could be found [hear](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/). 
-> 
-> You can also get data [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw).
-> 
-> `tools/convert_datasets/backbone`
+The images have a resolution of 960 × 720 and 32 semantic categories, in which the subset of 11 classes are used for segmentation experiments. The original data could be found [hear](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/). 
+
+> The annotations should be label index for mmsegmentation. If each mask is a specific class label for camvid, you should fuse all the masks of an image to generate the label index annotations. Use label index to represent the categories in the annotations.
+
+I provide a script `/tools/convert_datasets/camvid.py/` to convert the Camvid dataset, note that you need to change the path (train/val/test).
+
+> This code runs a little slow, you can get the data directly from [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw). `TrainID` indicates available annotations.
 
 ## Training and Testing
  Please see [train.md](docs/train.md) and [inference.md](docs/inference.md) for the basic usage of MMSegmentation.
 There are also tutorials for [customizing dataset](docs/tutorials/customize_datasets.md), [designing data pipeline](docs/tutorials/data_pipeline.md), [customizing modules](docs/tutorials/customize_models.md), and [customizing runtime](docs/tutorials/customize_runtime.md).
 MMSegmentation also provides many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
+### Train
+
+### Test
 
 ## Speed
 Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.

@@ -49,7 +49,7 @@ mkdir data
 
 ```shell
 pip install einops  # used for transpose
-pip install timm # used for Efficientnet_B1
+pip install timm==0.4.12 # used for Efficientnet_B1
 ```
 
 In order to change the BatchNorm in the model to SydncBatchNorm, we need to modify the relevant code in `timm/models/efficientnet.py`:

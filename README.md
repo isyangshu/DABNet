@@ -52,11 +52,11 @@ pip install einops  # used for transpose
 pip install timm==0.4.12 # used for Efficientnet_B1
 ```
 
-In order to change the BatchNorm in the model to SydncBatchNorm, we need to modify the relevant code in `timm/models/efficientnet.py`:
+In order to change the BatchNorm in the Efficientnet to SydncBatchNorm, we need to modify the relevant code in `timm/models/efficientnet.py`:
 
 `norm_layer=kwargs.pop('norm_layer', None) or partial(nn.BatchNorm2d, **resolve_bn_args(kwargs)),`
  
-For more details, please refer to [EfficientNet](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/efficientnet.py)
+For more details, please refer to [EfficientNet](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/efficientnet.py).
 
 - **TensorRT**
 

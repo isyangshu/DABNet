@@ -116,7 +116,7 @@ The images have a resolution of 960 × 720 and 32 semantic categories, in which 
 
 > The annotations should be label index for mmsegmentation. If each mask is a specific class label for camvid, you should fuse all the masks of an image to generate the label index annotations. Use label index to represent the categories in the annotations.
 
-I provide a script `/tools/convert_datasets/camvid.py/` to convert the Camvid dataset, note that you need to change the path (`train/val/test`).
+I provide a script `/tools/convert_datasets/camvid.py` to convert the Camvid dataset, note that you need to change the path (`train/val/test`).
 
 > This code runs a little slow, you can get the data directly from [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw). `TrainID` indicates available annotations.
 
@@ -126,15 +126,22 @@ There are also tutorials for [customizing dataset](docs/tutorials/customize_data
 MMSegmentation also provides many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
 ### Train
 ```shell
+./tools/dist_train.sh ${configs} ${GPU Nums}
 nohup ./tools/dist_train.sh ${configs} ${GPU Nums} 2>&1 &
+# For example, train a DABNet-Resnet18 on Cityscapes dataset with 4 GPUs
 nohup ./tools/dist_train.sh configs/dabnet/dabnet_r18-d32_in1k-pre_4x8_1024x1024_80k_cityscapes.py 4 2>&1 &
 ```
+
+> More detail, please refer to 
 ### Test
 
 ### Latency
 Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.
 
 ## Results
+
+> I need more time to train and test.
+> Please wait.
 ### Cityscapes
 
 | Method          | Crop Size | Inference Size | Batch size | iteration | set  | val mIoU  | test mIoU  | FPS | model                                                        | config                                                       |

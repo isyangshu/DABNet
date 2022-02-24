@@ -124,6 +124,7 @@ I provide a script `/tools/convert_datasets/camvid.py` to convert the Camvid dat
  Please see [train.md](docs/train.md) and [inference.md](docs/inference.md) for the basic usage of MMSegmentation.
 There are also tutorials for [customizing dataset](docs/tutorials/customize_datasets.md), [designing data pipeline](docs/tutorials/data_pipeline.md), [customizing modules](docs/tutorials/customize_models.md), and [customizing runtime](docs/tutorials/customize_runtime.md).
 MMSegmentation also provides many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
+
 ### Train
 ```shell
 ./tools/dist_train.sh ${configs} ${GPU Nums}
@@ -132,8 +133,28 @@ nohup ./tools/dist_train.sh ${configs} ${GPU Nums} 2>&1 &
 nohup ./tools/dist_train.sh configs/dabnet/dabnet_r18-d32_in1k-pre_4x8_1024x1024_80k_cityscapes.py 4 2>&1 &
 ```
 
-> More detail, please refer to 
+> More detail, please refer to [Train Doc](https://mmsegmentation.readthedocs.io/en/latest/train.html).
+
 ### Test
+
+```shell
+# Test mIoU for Cityscapes
+python tools/test.py ${configs} ${checkpoints} --eval mIoU
+```
+
+Test DABNet on cityscapes test split with 4 GPUs, and generate the png files to be submit to the official evaluation server.
+First, add following to config file configs/pspnet/pspnet_r50-d8_512x1024_40k_cityscapes.py,
+>data = dict(
+    test=dict(
+        img_dir='leftImg8bit/test',
+        ann_dir='gtFine/test'))
+Then run test.
+```shell
+./tools/dist_test.sh ${configs} ${checkpoints} 4 --format-only --eval-options "imgfile_prefix=./test_results"
+```
+> zip and submit `test_results`
+
+> More detail, please refer to [Test Doc](https://mmsegmentation.readthedocs.io/en/latest/inference.html).
 
 ### Latency
 Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.

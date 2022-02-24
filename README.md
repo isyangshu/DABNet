@@ -134,20 +134,20 @@ This project is released under the [Apache 2.0 license](LICENSE).
 ## Results
 ### Cityscapes
 
-| Method          | Crop Size | Inference Size | Batch size | iteration | set  | val mIoU  | test mIoU  | model                                                        | config                                                       |
-| --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- | ----- |------------------------------------------------------------ | ------------------------------------------------------------ |
-| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8          | 80k       | val  | 77.37 | 77.37 |[google drive](https://drive.google.com/file/d/1f3b7I7IwKx-hcr16afjcxkAyXyeNQCAz/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P2      | 1024x1024   | 2048x1024  |8          | 80k       | val  | 77.90 |77.37 | [google drive](https://drive.google.com/file/d/1dplB4wceJhyVRQfZR5AWODywMN90CY0h/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_R_P4        | 1024x1024   | 2048x1024   |8          | 80k       | val  | 76.65 |77.37 | [google drive](https://drive.google.com/file/d/18k26X-xM7BEQZUjzkvroeGV-6XwPgBqN/view?usp=sharing) | [config](configs/SETR/SETR_MLA_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P8        | 1024x1024   | 2048x1024   | 8          | 80k       | val  | 77.24 |77.37 | [google drive](https://drive.google.com/file/d/1ke6wcsCwP_J-p8sYriCZ3pC8G61bE0v_/view?usp=sharing) | [config](configs/SETR/SETR_MLA_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_R_P16        | 1024x1024   |2048x1024   | 8          | 80k       | val  | 78.39 |77.37 | [google drive](https://drive.google.com/file/d/1DcZltdh6eHwmQ5BvCdHudJRgJUjPzS56/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_E        | 1024x1024   | 2048x1024   |4          | 80k       | val  | 79.34 |77.37 | [google drive](https://drive.google.com/file/d/1469aYtEAuhT39BrHn0yOv1s71unF85JE/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8          | 80k       | train+val  | 77.37 | 77.37 |[google drive](https://drive.google.com/file/d/1f3b7I7IwKx-hcr16afjcxkAyXyeNQCAz/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P2      | 1024x1024   | 2048x1024  |8          | 80k       | train+val  | 77.90 |77.37 | [google drive](https://drive.google.com/file/d/1dplB4wceJhyVRQfZR5AWODywMN90CY0h/view?usp=sharing) | [config](configs/SETR/SETR_Naive_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_R_P4        | 1024x1024   | 2048x1024   |8          | 80k       | train+val  | 76.65 |77.37 | [google drive](https://drive.google.com/file/d/18k26X-xM7BEQZUjzkvroeGV-6XwPgBqN/view?usp=sharing) | [config](configs/SETR/SETR_MLA_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_R_P8        | 1024x1024   | 2048x1024   | 8          | 80k       | trian+val  | 77.24 |77.37 | [google drive](https://drive.google.com/file/d/1ke6wcsCwP_J-p8sYriCZ3pC8G61bE0v_/view?usp=sharing) | [config](configs/SETR/SETR_MLA_768x768_80k_cityscapes_bs_8.py) |
-| DABNet_R_P16        | 1024x1024   |2048x1024   | 8          | 80k       | train+val  | 78.39 |77.37 | [google drive](https://drive.google.com/file/d/1DcZltdh6eHwmQ5BvCdHudJRgJUjPzS56/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_40k_cityscapes_bs_8.py) |
-| DABNet_E        | 1024x1024   | 2048x1024   |4          | 80k       | trian+val  | 79.34 |77.37 | [google drive](https://drive.google.com/file/d/1469aYtEAuhT39BrHn0yOv1s71unF85JE/view?usp=sharing) | [config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py) |
+| Method          | Crop Size | Inference Size | Batch size | iteration | set  | val mIoU  | test mIoU  | FPS | model                                                        | config                                                       |
+| --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- | ----- |----- |------------------------------------------------------------ | ------------------------------------------------------------ |
+| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 77.4 |   -  | 33.5 | - | [config](logs/dabnet-P1.log) |
+| DABNet_R_P2      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 77.8 | 76.1 | 34.9 | - | [config](logs/dabnet-cityscapes.log) |
+| DABNet_R_P4      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.1 |   -  | 34.7 | - | [config](logs/dabnet-P4.log) |
+| DABNet_R_P8      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.8 | 77.3 | 31.1 | - | [config](logs/DABNet-P8.log) |
+| DABNet_R_P16     | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.4 |   -  | 21.0 | - | [config](logs/dabnet-P16.log) |
+| DABNet_E         | 1024x1024   | 2048x1024  | 4 * 4     | 80k     | val       | 78.7 | 77.5 | 20.3 | - | [config](logs/dabnet-E-cityscapes.log) |
+| DABNet_R_P1      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
+| DABNet_R_P2      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
+| DABNet_R_P4      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
+| DABNet_R_P8      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | trian+val |   -  |   -  |   -  | - | - |
+| DABNet_R_P16     | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
+| DABNet_E         | 1024x1024   | 2048x1024  | 4 * 4     | 80k     | trian+val |   -  |   -  |   -  | - | - |
 
 ### COCO-10k
 

@@ -116,7 +116,7 @@ The images have a resolution of 960 × 720 and 32 semantic categories, in which 
 
 > The annotations should be label index for mmsegmentation. If each mask is a specific class label for camvid, you should fuse all the masks of an image to generate the label index annotations. Use label index to represent the categories in the annotations.
 
-I provide a script `/tools/convert_datasets/camvid.py/` to convert the Camvid dataset, note that you need to change the path (train/val/test).
+I provide a script `/tools/convert_datasets/camvid.py/` to convert the Camvid dataset, note that you need to change the path (`train/val/test`).
 
 > This code runs a little slow, you can get the data directly from [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw). `TrainID` indicates available annotations.
 
@@ -128,12 +128,8 @@ MMSegmentation also provides many [training tricks](docs/tutorials/training_tric
 
 ### Test
 
-## Speed
+### Latency
 Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.
-
-## License
-
-This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Results
 ### Cityscapes
@@ -168,9 +164,6 @@ This project is released under the [Apache 2.0 license](LICENSE).
 | DABNet_E        | 960x768  | 960x768  | 2 * 4   | 10k       | train+val  | 76.5 | 56.5 | [config](logs/README.md) |
 
 ## Results & PretrainedParams
-
-### Log
-[config](configs/SETR/SETR_PUP_768x768_80k_cityscapes_bs_8.py)
 
 ### Test results
 

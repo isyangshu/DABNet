@@ -121,7 +121,7 @@ python tools/convert_datasets/coco_stuff164k.py /path/to/coco_stuff164k --nproc 
 ## Training and Testing
  Please see [train.md](docs/train.md) and [inference.md](docs/inference.md) for the basic usage of MMSegmentation.
 There are also tutorials for [customizing dataset](docs/tutorials/customize_datasets.md), [designing data pipeline](docs/tutorials/data_pipeline.md), [customizing modules](docs/tutorials/customize_models.md), and [customizing runtime](docs/tutorials/customize_runtime.md).
-We also provide many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
+MMSegmentation also provides many [training tricks](docs/tutorials/training_tricks.md) for better training and [useful tools](docs/useful_tools.md) for deployment.
 
 ## Speed
 Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.

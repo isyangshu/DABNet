@@ -118,7 +118,7 @@ The images have a resolution of 960 × 720 and 32 semantic categories, in which 
 
 I provide a script `/tools/convert_datasets/camvid.py` to convert the Camvid dataset, note that you need to change the path (`train/val/test`).
 
-> This code runs a little slow, you can get the data directly from [CamVid-baidu (j9qu)](https://pan.baidu.com/s/1hExlf0uZ0kuar99xzpL0Sw). `TrainID` indicates available annotations.
+> This code runs a little slow, you can get the data directly from [CamVid-baidu (1snk)](https://pan.baidu.com/s/1swoEZCtNYPb_nzq01Wa55g). `TrainID` indicates available annotations.
 
 ## Training and Testing
  Please see [train.md](docs/train.md) and [inference.md](docs/inference.md) for the basic usage of MMSegmentation.
@@ -162,11 +162,26 @@ nohup ./tools/dist_train.sh configs/dabnet/dabnet_r18-d32_in1k-pre_4x8_1024x1024
 > More detail, please refer to [Test Doc](https://mmsegmentation.readthedocs.io/en/latest/inference.html).
 
 ### Latency
-Different from the code of MMsegmentation, we refer to FasterSeg and STDC to implement tools for testing speed.
+Different from the code of MMsegmentation, we refer to [FasterSeg](https://github.com/VITA-Group/FasterSeg) and [STDC](https://github.com/MichaelFan01/STDC-Seg) to implement tools for testing speed.
+
+* If you have successfully installed TensorRT, you will automatically use TensorRT for the following latency tests (see [function](https://github.com/VITA-Group/FasterSeg/blob/master/tools/utils/darts_utils.py#L167) here).
+* Otherwise you will be switched to use Pytorch for the latency tests (see [function](https://github.com/VITA-Group/FasterSeg/blob/master/tools/utils/darts_utils.py#L184) here).
+* I fine-tune related code to fit the MMsegmentation to measure latency. For more details, see `tools/print_latency.py`.
+
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python ./tools/print_latency.py ${configs} ${checkpoints}
+```
+
+```text
+In practice, using `torch.backends.cudnn.benchmark = True` may cause out of memory at some resolutions. 
+Meanwhile, using `torch.backends.cudnn.benchmark = False` does not affect the measurement.
+```
 
 ## Results
 
 > I need more time to train and test.
+> 
 > Please wait.
 ### Cityscapes
 

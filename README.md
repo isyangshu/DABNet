@@ -10,6 +10,9 @@
 
 ![image](resources/result.png)
 
+**Note**
+I have executed the relevant instructions on docker myself to ensure that the code can be run correctly. I gave the [training_log](nohup.out), with ResNet-18 as backbone and Patch size 2. (2022-03-02)
+
 ## Installation
 
 Our project is developed based on [MMsegmentation](https://github.com/open-mmlab/mmsegmentation). MMSegmentation is an open source semantic segmentation toolbox based on PyTorch. Please refer to [get_started.md](docs/get_started.md#installation) for installation and [dataset_prepare.md](docs/dataset_prepare.md#prepare-datasets) for dataset preparation.

@@ -214,4 +214,7 @@ Meanwhile, using `torch.backends.cudnn.benchmark = False` does not affect the me
 | DABNet_R_P2     | 960x768  | 960x768  | 2 * 4   | 10k       | train+val  | 74.3 | 92.2 | [config](logs/README.md) |
 | DABNet_E        | 960x768  | 960x768  | 2 * 4   | 10k       | train+val  | 76.5 | 56.5 | [config](logs/README.md) |
 
+## Pretrained weights
+
+You can get the pretrained weights directly from [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg).
 

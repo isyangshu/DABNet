@@ -191,11 +191,11 @@ Meanwhile, using `torch.backends.cudnn.benchmark = False` does not affect the me
 | Method          | Crop Size | Inference Size | Batch size | iteration | set  | val mIoU  | test mIoU  | FPS | model                                                        | config                                                       |
 | --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- | ----- |----- |------------------------------------------------------------ | ------------------------------------------------------------ |
 | DABNet_R_P1      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 77.4 |   -  | 33.5 | - | [config](logs/dabnet-P1.log) |
-| DABNet_R_P2      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 77.8 | 76.1 | 34.9 | - | [config](logs/dabnet-cityscapes.log) |
+| DABNet_R_P2      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 77.8 | 76.1 | 34.9 | [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg) | [config](logs/dabnet-cityscapes.log) |
 | DABNet_R_P4      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.1 |   -  | 34.7 | - | [config](logs/dabnet-P4.log) |
 | DABNet_R_P8      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.8 | 77.3 | 31.1 | - | [config](logs/DABNet-P8.log) |
 | DABNet_R_P16     | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | val       | 78.4 |   -  | 21.0 | - | [config](logs/dabnet-P16.log) |
-| DABNet_E         | 1024x1024   | 2048x1024  | 4 * 4     | 80k     | val       | 78.7 | 77.5 | 20.3 | - | [config](logs/dabnet-E-cityscapes.log) |
+| DABNet_E         | 1024x1024   | 2048x1024  | 4 * 4     | 80k     | val       | 78.7 | 77.5 | 20.3 | [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg) | [config](logs/dabnet-E-cityscapes.log) |
 | DABNet_R_P1      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
 | DABNet_R_P2      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
 | DABNet_R_P4      | 1024x1024   | 2048x1024  | 8 * 4     | 80k     | train+val |   -  |   -  |   -  | - | - |
@@ -207,8 +207,8 @@ Meanwhile, using `torch.backends.cudnn.benchmark = False` does not affect the me
 
 | Method          | Crop Size | Inference Size | Batch size | iteration | mIoU  | pixACC | FPS  | model                                                        | config                                                       |
 | --------------- | --------- | ---------------- | ---------- | --------- | ---- | ----- | ----- |------------------------------------------------------------ | ------------------------------------------------------------ |
-| DABNet_R_P2     | 512x512  | 640x640  | 8 * 4   | 80k | 29.5 | 63.1 | 104.6 | - | [config](logs/dabnet-coco10k.log) |
-| DABNet_E        | 512x512  | 640x640  | 8 * 4   | 80k | 32.4 | 65.5 | 70.8  | - | [config](logs/dabnet-e-coco10k.log) |
+| DABNet_R_P2     | 512x512  | 640x640  | 8 * 4   | 80k | 29.5 | 63.1 | 104.6 | [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg) | [config](logs/dabnet-coco10k.log) |
+| DABNet_E        | 512x512  | 640x640  | 8 * 4   | 80k | 32.4 | 65.5 | 70.8  | [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg) | [config](logs/dabnet-e-coco10k.log) |
 
 ### CamVid
 

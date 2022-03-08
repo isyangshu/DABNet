@@ -10,7 +10,7 @@
 
 ![image](resources/result.png)
 
-**Note**
+**Note：**
 I have executed the relevant instructions on docker myself to ensure that the code can be run correctly. I gave the [training_log](nohup.out), with ResNet-18 as backbone and Patch size 2. (2022-03-02)
 
 ## Installation

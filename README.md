@@ -221,3 +221,7 @@ Meanwhile, using `torch.backends.cudnn.benchmark = False` does not affect the me
 
 You can get the pretrained weights directly from [baidu (2t0o)](https://pan.baidu.com/s/1frav6gGSJ0p396sCOAhODg).
 
+## Cityscapes test results
+You can get the pretrained weights directly from [baidu (vq1n)](https://pan.baidu.com/s/1TlLLYnwLAEqhYwbuMhbXpA).
+
+

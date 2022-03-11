@@ -11,7 +11,9 @@
 ![image](resources/result.png)
 
 **Note：**
-I have executed the relevant instructions on docker myself to ensure that the code can be run correctly. I gave the [training_log](nohup.out), with ResNet-18 as backbone and Patch size 2. (2022-03-02)
+I have executed the relevant instructions on docker myself to ensure that the code can be run correctly. 
+I gave the [training_log](nohup.out), with ResNet-18 as backbone and Patch size 2. (2022-03-02)
+I gave the [training_log](nohup_E.out), with EfficientNet-B1 as backbone and Patch size 2. (2022-03-10)
 
 ## Installation
 

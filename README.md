@@ -1,4 +1,4 @@
-# Real-time Semantic Segmentation via Densely Aggregated Bilateral Network (DABNet) 
+# Real-time Semantic Segmentation via Densely Aggregated Bilateral Network (DABNet) (Accepted by TNNLS)
 
 ![GitHub License](https://img.shields.io/github/license/isyangshu/DABNet?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/isyangshu/DABNet?style=flat-square)
